@@ -1,3 +1,9 @@
+/*
+document.getElementsByClassName("set")[0].addEventListener("click", function() {
+    alert('I got Clicked!');
+});
+*/
+
 function play(keyValue) {
     switch (keyValue) {
         case 'w':
@@ -41,6 +47,16 @@ function play(keyValue) {
 }
 
 
+function animateButton(keyValue) {
+    var activeButton = document.querySelector("." + keyValue);
+    activeButton.classList.add("pressed");
+
+    setTimeout(function() {
+        activeButton.classList.remove("pressed");
+    }, 100);
+}
+
+
 // Detecting button press
 
 for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
@@ -49,6 +65,7 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
 
         var buttonInnerHTML = this.innerHTML;
         play(buttonInnerHTML);
+        animateButton(buttonInnerHTML);
         
     });
 
@@ -59,6 +76,7 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
 
 document.addEventListener("keydown", function(event) {
     play(event.key);
+    animateButton(event.key);
 });
 
 
