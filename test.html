@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Responsiveness</title>
+    <style>
+        body {
+            height: 100vh;
+            text-align: center;
+        }
+        .set {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .drum {
+            border: 10px solid #404B29;
+            border-radius: 15px;
+            font-size: 5rem;
+            line-height: 2;
+            font-weight: 900;
+            color: #229E73;
+            text-shadow: 3px 3px 1px #79d7dd;
+            width: 150px;
+            height: 180px;
+            text-align: center;
+            margin: 20px;
+        }
+        @media(max-width: 750px) {
+        
+            .set {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .drum {
+                font-size: 3rem;
+                color: #981932;
+                text-shadow: 3px 3px #da5286;
+                width: 130px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="set">
+        <button class="w drum">w</button>
+        <button class="a drum">a</button>
+        <button class="s drum">s</button>
+        <button class="d drum">d</button>
+        <button class="j drum">j</button>
+        <button class="k drum">k</button>
+        <button class="l drum">l</button>
+    </div>
+</body>
+</html>
