@@ -42,7 +42,7 @@ function play(keyValue) {
             break;
     
         default:
-            console.log()
+            console.log();
     }
 }
 
