@@ -32,7 +32,7 @@ function play(keyValue) {
             break;
 
         case 'k':
-            var kick = new Audio('./sounds/kick-bass.mp3');
+            var kick = new Audio('./sounds/kick-bass1.mp3');
             kick.play();
             break;
 
