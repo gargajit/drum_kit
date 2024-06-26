@@ -49,10 +49,14 @@ function play(keyValue) {
 
 function animateButton(keyValue) {
     var activeButton = document.querySelector("." + keyValue);
-    activeButton.classList.add("pressed");
+    if (!!activeButton) {
+        activeButton.classList.add("pressed");
+    }
 
     setTimeout(function() {
-        activeButton.classList.remove("pressed");
+        if (!!activeButton) {
+            activeButton.classList.remove("pressed");
+        }
     }, 100);
 }
 
